@@ -1,0 +1,3 @@
+[submodule "core_tiny"]
+	path = core_tiny
+	url = https://github.com/andreili/FlexRV32.git
