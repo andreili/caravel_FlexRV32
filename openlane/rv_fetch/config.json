@@ -1,0 +1,85 @@
+{
+    "DESIGN_NAME": "rv_fetch",
+    "DESIGN_IS_CORE": 0,
+    "VERILOG_FILES": [
+        "dir::../../verilog/rtl/defines.v",
+        "dir::../../core_tiny/rtl/core/rv_fetch.sv",
+        "dir::../../core_tiny/rtl/core/rv_fetch_buf.sv",
+        "dir::../../core_tiny/rtl/core/math/add.sv"
+    ],
+    "CLOCK_PERIOD": 20,
+    "CLOCK_PORT": "i_clk",
+    "CLOCK_NET": "i_clk",
+
+    "_SYNTH_STRATEGY": "AREA 0",
+    "_SYNTH_SIZING": 0,
+    "SYNTH_AUTONAME": 1,
+    "_SYNTH_BUFFERING": 0,
+    "SYNTH_DEFINES": "",
+
+    "_MACRO_PLACEMENT_CFG": "dir::./placement.cfg",
+    "_EXTRA_LEFS": [],
+
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 150 120",
+    "_FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
+    "DIODE_INSERTION_STRATEGY": 0,
+    "FP_DEF_TEMPLATE": "dir::./io.def",
+    "PLACE_SITE_WIDTH": 0.1,
+    "PLACE_SITE_HEIGHT": 0.5,
+    "FP_IO_HLENGTH": 1,
+    "FP_IO_VLENGTH": 1,
+    "FP_PDN_CORE_RING": 1,
+    "FP_PDN_CORE_RING_HOFFSET": -2.180,
+    "FP_PDN_CORE_RING_VOFFSET": -3.520,
+    "FP_PDN_CORE_RING_VWIDTH": 3.0,
+    "FP_PDN_CORE_RING_HWIDTH": 3.0,
+    "FP_PDN_CORE_RING_VSPACING": 1.7,
+    "FP_PDN_CORE_RING_HSPACING": 1.7,
+    "FP_PDN_HWIDTH": 3.0,
+    "FP_PDN_VWIDTH": 3.0,
+    "FP_PDN_VSPACING": 15.0,
+    "FP_PDN_HSPACING": 15.0,
+    "FP_PDN_VOFFSET": 50,
+    "_RUN_TAP_DECAP_INSERTION": false,
+    "_FP_PDN_RAILS_LAYER": "met4",
+    "_FP_PDN_UPPER_LAYER": "met4",
+    "_FP_PDN_LOWER_LAYER": "met3",
+
+    "PL_TARGET_DENSITY": 0.75,
+    "_PL_RESIZER_SETUP_SLACK_MARGIN": 0.4,
+    "_PL_RESIZER_MAX_SLEW_MARGIN": 50,
+    "_PL_RESIZER_DESIGN_OPTIMIZATIONS": 1,
+    "_PL_RESIZER_TIMING_OPTIMIZATIONS": 1,
+    "_PL_RESIZER_BUFFER_INPUT_PORTS": 0,
+    "PL_RESIZER_BUFFER_OUTPUT_PORTS": 0,
+    "_PL_ROUTABILITY_DRIVEN": 1,
+    "_PL_OPTIMIZE_MIRRORING": 1,
+
+    "GPL_CELL_PADDING": 0,
+    "DPL_CELL_PADDING": 0,
+
+    "_GLB_RESIZER_MAX_SLEW_MARGIN": 50,
+    "_GLB_RESIZER_SETUP_SLACK_MARGIN": 0.2,
+
+    "_GRT_MAX_DIODE_INS_ITERS": 5,
+    "_GRT_ANT_ITERS": 5,
+
+    "VDD_NETS": [
+        "vccd1"
+    ],
+    "GND_NETS": [
+        "vssd1"
+    ],
+    "IO_SYNC": 0,
+    "RUN_CVC": 1,
+    "pdk::sky130*": {
+        "RT_MAX_LAYER": "met4"
+    },
+    "pdk::gf180mcuC": {
+        "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
+        "FP_CORE_UTIL": 40,
+        "RT_MAX_LAYER": "Metal4",
+        "SYNTH_MAX_FANOUT": 4
+    }
+}
