@@ -1,0 +1,258 @@
+{
+    "pin_width": 1000,
+    "pin_height": 300,
+    "steps": [ 2000, 2000, 2000, 1400 ],
+    "top":
+    [
+	{
+	    "type": "bus",
+	    "name": "i_instruction[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": 2000,
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "i_ready",
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_pc[{}]",
+	    "start": 1,
+	    "end": 15,
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_pc_next[{}]",
+	    "start": 1,
+	    "end": 15,
+	    "position": "rel 1",
+	    "is_input": true
+	}
+    ],
+    "bottom":
+    [
+	
+	{
+	    "type": "single",
+	    "name": "o_inst_csr_req",
+	    "position": 2000,
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_rd[{}]",
+	    "start": 0,
+	    "end": 4,
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_imm_i[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_pc[{}]",
+	    "start": 1,
+	    "end": 15,
+	    "position": "rel 2",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_pc_next[{}]",
+	    "start": 1,
+	    "end": 15,
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_funct3[{}]",
+	    "start": 0,
+	    "end": 2,
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_alu_ctrl[{}]",
+	    "start": 0,
+	    "end": 4,
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_res_src[{}]",
+	    "start": 0,
+	    "end": 2,
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_reg_write",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_op1_src",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_op2_src",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_inst_mret",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_inst_jalr",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_inst_jal",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_inst_branch",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_inst_store",
+	    "position": "rel 1",
+	    "is_input": false
+	}
+    ],
+    "right":
+    [
+	{
+	    "type": "bus",
+	    "name": "o_csr_idx[{}]",
+	    "start": 0,
+	    "end": 11,
+	    "position": 5000,
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_csr_imm[{}]",
+	    "start": 0,
+	    "end": 4,
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_csr_imm_sel",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_csr_write",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_csr_set",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_csr_clear",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_csr_read",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_csr_ebreak",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_csr_pc_next[{}]",
+	    "start": 1,
+	    "end": 15,
+	    "position": "rel 1",
+	    "is_input": false
+	}
+    ],
+    "left":
+    [
+	{
+	    "type": "single",
+	    "name": "i_clk",
+	    "position": 5000,
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "o_inst_supported",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "i_flush",
+	    "position": "rel 2",
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "i_stall",
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "o_rs1[{}]",
+	    "start": 0,
+	    "end": 4,
+	    "position": "rel 2",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_rs2[{}]",
+	    "start": 0,
+	    "end": 4,
+	    "position": "rel 1",
+	    "is_input": false
+	}
+    ]
+}

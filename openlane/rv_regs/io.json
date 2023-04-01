@@ -1,0 +1,86 @@
+{
+    "pin_width": 1000,
+    "pin_height": 300,
+    "steps": [ 2720, 2720, 2000, 2000 ],
+    "top":
+    [
+	{
+	    "type": "single",
+	    "name": "i_clk",
+	    "position": 10000,
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "i_reset_n",
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_rs1[{}]",
+	    "start": 0,
+	    "end": 4,
+	    "position": 100000,
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_rs2[{}]",
+	    "start": 0,
+	    "end": 4,
+	    "position": "rel 1",
+	    "is_input": true
+	}
+    ],
+    "bottom":
+    [
+	{
+	    "type": "single",
+	    "name": "i_rs_valid",
+	    "position": 10000,
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_rd[{}]",
+	    "start": 0,
+	    "end": 4,
+	    "position": 80000,
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "i_write",
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_data[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": "rel 1",
+	    "is_input": true
+	}
+    ],
+    "right":
+    [
+	{
+	    "type": "bus",
+	    "name": "o_data1[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": 4000,
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_data2[{}]",
+	    "start": 0,
+	    "end": 131,
+	    "position": "rel 3",
+	    "is_input": false
+	}
+    ]
+}

@@ -1,0 +1,261 @@
+{
+    "pin_width": 1000,
+    "pin_height": 300,
+    "steps": [ 1200, 1200, 2000, 2000 ],
+    "top":
+    [
+	{
+	    "type": "single",
+	    "name": "i_clk",
+	    "position": 2000,
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "i_reset_n",
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "i_csr_read",
+	    "position": "rel 2",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_csr_data[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "o_pc_select",
+	    "position": "rel 2",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_pc_target[{}]",
+	    "start": 1,
+	    "end": 15,
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_to_trap",
+	    "position": "rel 1",
+	    "is_input": false
+	}
+    ],
+    "bottom":
+    [
+	{
+	    "type": "single",
+	    "name": "i_flush",
+	    "position": 5000,
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_reg_data2[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": "rel 2",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_pc_result[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": "rel 2",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_result[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_reg_write",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_rd[{}]",
+	    "start": 0,
+	    "end": 4,
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_res_src[{}]",
+	    "start": 0,
+	    "end": 2,
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_funct3[{}]",
+	    "start": 0,
+	    "end": 2,
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_ready",
+	    "position": "rel 1",
+	    "is_input": false
+	}
+    ],
+    "left":
+    [
+	{
+	    "type": "bus",
+	    "name": "i_op1[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": 2000,
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_op2[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "i_store",
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "i_reg_write",
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_rd[{}]",
+	    "start": 0,
+	    "end": 4,
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "i_inst_jal_jalr",
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "i_inst_branch",
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_pc[{}]",
+	    "start": 1,
+	    "end": 15,
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_pc_next[{}]",
+	    "start": 1,
+	    "end": 15,
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_pc_target[{}]",
+	    "start": 1,
+	    "end": 15,
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_res_src[{}]",
+	    "start": 0,
+	    "end": 2,
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_funct3[{}]",
+	    "start": 0,
+	    "end": 2,
+	    "position": "rel 2",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_alu_ctrl[{}]",
+	    "start": 0,
+	    "end": 4,
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "i_to_trap",
+	    "position": "rel 1",
+	    "is_input": true
+	}
+    ],
+    "right":
+    [
+	{
+	    "type": "bus",
+	    "name": "o_add[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": 45000,
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_store",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_wdata[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": 100000,
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_wsel[{}]",
+	    "start": 0,
+	    "end": 3,
+	    "position": "rel 1",
+	    "is_input": false
+	}
+    ]
+}

@@ -1,25 +1,53 @@
 {
-    "DESIGN_NAME": "rv_fetch",
+    "DESIGN_NAME": "rv_core",
     "DESIGN_IS_CORE": 0,
     "VERILOG_FILES": [
         "dir::../../verilog/rtl/defines.v",
+        "dir::../../core_tiny/rtl/core/rv_core.sv",
+        "dir::../../core_tiny/rtl/core/rv_ctrl.sv",
+        "dir::../../core_tiny/rtl/core/rv_hazard.sv"
+    ],
+    "VERILOG_FILES_BLACKBOX": [
         "dir::../../core_tiny/rtl/core/rv_fetch.sv",
-        "dir::../../core_tiny/rtl/core/rv_fetch_buf.sv",
-        "dir::../../core_tiny/rtl/core/math/add.sv"
+        "dir::../../core_tiny/rtl/core/rv_decode.sv",
+        "dir::../../core_tiny/rtl/core/rv_alu1.sv",
+        "dir::../../core_tiny/rtl/core/rv_alu2.sv",
+        "dir::../../core_tiny/rtl/core/rv_write.sv",
+        "dir::../../core_tiny/rtl/core/rv_regs.sv"
     ],
     "CLOCK_PERIOD": 20,
     "CLOCK_PORT": "i_clk",
     "CLOCK_NET": "i_clk",
 
     "SYNTH_STRATEGY": "AREA 0",
-    "SYNTH_SIZING": 0,
+    "SYNTH_SIZING": 1,
     "SYNTH_DEFINES": "",
 
-    "_MACRO_PLACEMENT_CFG": "dir::./placement.cfg",
-    "_EXTRA_LEFS": [],
+    "_CTS_CLK_BUFFER_LIST": [
+        "sky130_fd_sc_hd__clkbuf_1"
+    ],
+
+    "MACRO_PLACEMENT_CFG": "dir::./placement.cfg",
+    "EXTRA_LEFS": [
+        "dir::../../lef/rv_fetch.lef",
+        "dir::../../lef/rv_decode.lef",
+        "dir::../../lef/rv_alu1.lef",
+        "dir::../../lef/rv_alu2.lef",
+        "dir::../../lef/rv_write.lef",
+        "dir::../../lef/rv_regs.lef"
+    ],
+    "EXTRA_GDS_FILES": [
+        "dir::../../gds/rv_fetch.gds",
+        "dir::../../gds/rv_decode.gds",
+        "dir::../../gds/rv_alu1.gds",
+        "dir::../../gds/rv_alu2.gds",
+        "dir::../../gds/rv_write.gds",
+        "dir::../../gds/rv_regs.gds"
+    ],
 
     "FP_SIZING": "absolute",
-    "DIE_AREA": "0 0 150 115",
+    "DIE_AREA": "0 0 550 670",
+    "FP_IO_MIN_DISTANCE": 0.5,
     "FP_DEF_TEMPLATE": "dir::./io.def",
     "DIODE_INSERTION_STRATEGY": 0,
     "PLACE_SITE_WIDTH": 0.1,
@@ -41,13 +69,10 @@
     "FP_PDN_HSPACING": "expr::5*$FP_PDN_HWIDTH",
     "FP_PDN_VOFFSET": 0,
     "FP_PDN_HOFFSET": 0,
-    "_FP_PDN_RAILS_LAYER": "met4",
-    "_FP_PDN_UPPER_LAYER": "met4",
-    "_FP_PDN_LOWER_LAYER": "met3",
 
-    "PL_TARGET_DENSITY": 0.77,
+    "PL_TARGET_DENSITY": 0.75,
     "PL_RESIZER_DESIGN_OPTIMIZATIONS": 1,
-    "PL_RESIZER_TIMING_OPTIMIZATIONS": 1,
+    "PL_RESIZER_TIMING_OPTIMIZATIONS": 1, 
     "PL_RESIZER_BUFFER_INPUT_PORTS": 0,
     "PL_RESIZER_BUFFER_OUTPUT_PORTS": 0,
     "PL_ROUTABILITY_DRIVEN": 1,
@@ -56,6 +81,9 @@
     "GPL_CELL_PADDING": 0,
     "DPL_CELL_PADDING": 0,
     "GLB_OPTIMIZE_MIRRORING": 1,
+
+    "GRT_MAX_DIODE_INS_ITERS": 5,
+    "GRT_ANT_ITERS": 5,
 
     "VDD_NETS": [
         "vccd1"
@@ -66,6 +94,7 @@
     "IO_SYNC": 0,
     "RUN_CVC": 1,
     "pdk::sky130*": {
+        "_FP_CORE_UTIL": 70,
         "RT_MAX_LAYER": "met4"
     },
     "pdk::gf180mcuC": {

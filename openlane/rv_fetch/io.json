@@ -1,14 +1,13 @@
 {
     "pin_width": 1000,
     "pin_height": 300,
-    "step_x": 2000,
-    "step_y": 1360,
-    "top":
+    "steps": [ 2000, 2000, 3000, 2000 ],
+    "left":
     [
 	{
 	    "type": "single",
 	    "name": "i_clk",
-	    "position": 140000,
+	    "position": 20000,
 	    "is_input": true
 	},
 	{
@@ -16,59 +15,17 @@
 	    "name": "i_reset_n",
 	    "position": "rel 1",
 	    "is_input": true
-	}
-    ],
-    "left":
-    [
-	{
-	    "type": "single",
-	    "name": "i_ack",
-	    "position": 10000,
-	    "is_input": true
 	},
-	{
-	    "type": "bus",
-	    "name": "i_instruction[{}]",
-	    "start": 0,
-	    "end": 31,
-	    "position": "rel 1",
-	    "is_input": true
-	},
-	{
-	    "type": "bus",
-	    "name": "o_addr[{}]",
-	    "start": 1,
-	    "end": 15,
-	    "position": 95000,
-	    "is_input": false
-	},
-	{
-	    "type": "single",
-	    "name": "o_cyc",
-	    "position": "rel 1",
-	    "is_input": false
-	}
-    ],
-    "bottom":
-    [
 	{
 	    "type": "single",
 	    "name": "i_ebreak",
-	    "position": 10000,
-	    "is_input": true
-	},
-	{
-	    "type": "bus",
-	    "name": "i_pc_trap[{}]",
-	    "start": 1,
-	    "end": 15,
-	    "position": "rel 1",
+	    "position": "rel 2",
 	    "is_input": true
 	},
 	{
 	    "type": "single",
 	    "name": "i_stall",
-	    "position": 105000,
+	    "position": "rel 1",
 	    "is_input": true
 	},
 	{
@@ -92,14 +49,56 @@
 	    "is_input": false
 	}
     ],
+    "top":
+    [
+	{
+	    "type": "single",
+	    "name": "i_ack",
+	    "position": 2000,
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_instruction[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "o_addr[{}]",
+	    "start": 1,
+	    "end": 15,
+	    "position": "rel 2",
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_cyc",
+	    "position": "rel 1",
+	    "is_input": false
+	}
+    ],
     "right":
+    [
+	{
+	    "type": "bus",
+	    "name": "i_pc_trap[{}]",
+	    "start": 1,
+	    "end": 15,
+	    "position": 10000,
+	    "is_input": true
+	}
+    ],
+    "bottom":
     [
 	{
 	    "type": "bus",
 	    "name": "o_instruction[{}]",
 	    "start": 0,
 	    "end": 31,
-	    "position": 10000,
+	    "position": 2000,
 	    "is_input": false
 	},
 	{
@@ -113,7 +112,7 @@
 	    "name": "o_pc[{}]",
 	    "start": 1,
 	    "end": 15,
-	    "position": 65000,
+	    "position": "rel 1",
 	    "is_input": false
 	},
 	{
@@ -121,7 +120,7 @@
 	    "name": "o_pc_next[{}]",
 	    "start": 1,
 	    "end": 15,
-	    "position": "rel 2",
+	    "position": "rel 1",
 	    "is_input": false
 	}
     ]

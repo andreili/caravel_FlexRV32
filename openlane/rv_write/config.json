@@ -1,11 +1,9 @@
 {
-    "DESIGN_NAME": "rv_fetch",
+    "DESIGN_NAME": "rv_write",
     "DESIGN_IS_CORE": 0,
     "VERILOG_FILES": [
         "dir::../../verilog/rtl/defines.v",
-        "dir::../../core_tiny/rtl/core/rv_fetch.sv",
-        "dir::../../core_tiny/rtl/core/rv_fetch_buf.sv",
-        "dir::../../core_tiny/rtl/core/math/add.sv"
+        "dir::../../core_tiny/rtl/core/rv_write.sv"
     ],
     "CLOCK_PERIOD": 20,
     "CLOCK_PORT": "i_clk",
@@ -19,7 +17,8 @@
     "_EXTRA_LEFS": [],
 
     "FP_SIZING": "absolute",
-    "DIE_AREA": "0 0 150 115",
+    "DIE_AREA": "0 0 100 100",
+    "FP_IO_MIN_DISTANCE": 0.5,
     "FP_DEF_TEMPLATE": "dir::./io.def",
     "DIODE_INSERTION_STRATEGY": 0,
     "PLACE_SITE_WIDTH": 0.1,
@@ -45,7 +44,7 @@
     "_FP_PDN_UPPER_LAYER": "met4",
     "_FP_PDN_LOWER_LAYER": "met3",
 
-    "PL_TARGET_DENSITY": 0.77,
+    "PL_TARGET_DENSITY": 0.40,
     "PL_RESIZER_DESIGN_OPTIMIZATIONS": 1,
     "PL_RESIZER_TIMING_OPTIMIZATIONS": 1,
     "PL_RESIZER_BUFFER_INPUT_PORTS": 0,

@@ -1,0 +1,94 @@
+{
+    "pin_width": 1000,
+    "pin_height": 300,
+    "steps": [ 1500, 1500, 1500, 2000 ],
+    "top":
+    [
+	{
+	    "type": "single",
+	    "name": "i_clk",
+	    "position": 2000,
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "i_flush",
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_funct3[{}]",
+	    "start": 0,
+	    "end": 2,
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_alu_result[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "single",
+	    "name": "i_reg_write",
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_rd[{}]",
+	    "start": 0,
+	    "end": 4,
+	    "position": "rel 1",
+	    "is_input": true
+	},
+	{
+	    "type": "bus",
+	    "name": "i_res_src[{}]",
+	    "start": 0,
+	    "end": 2,
+	    "position": "rel 1",
+	    "is_input": true
+	}
+    ],
+    "left":
+    [
+	{
+	    "type": "bus",
+	    "name": "o_data[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": 2000,
+	    "is_input": false
+	},
+	{
+	    "type": "single",
+	    "name": "o_write_op",
+	    "position": "rel 1",
+	    "is_input": false
+	},
+	{
+	    "type": "bus",
+	    "name": "o_rd[{}]",
+	    "start": 0,
+	    "end": 4,
+	    "position": "rel 1",
+	    "is_input": false
+	}
+    ],
+    "right":
+    [
+	{
+	    "type": "bus",
+	    "name": "i_data[{}]",
+	    "start": 0,
+	    "end": 31,
+	    "position": 2000,
+	    "is_input": true
+	}
+    ]
+}

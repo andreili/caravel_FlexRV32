@@ -27,7 +27,7 @@ openlane_cmd = \
 	-save_path $$(realpath ..) \
 	-save \
 	-tag $(OPENLANE_RUN_TAG) \
-	-overwrite \
+	-overwrite -verbose 1 \
 	-ignore_mismatches"
 openlane_cmd_interactive = "flow.tcl -it -file $$(realpath ./$*/interactive.tcl)"
 
@@ -67,6 +67,7 @@ ifneq (,$(wildcard ./$(current_design)/interactive.tcl))
 		$(OPENLANE_IMAGE_NAME) sh -c $(openlane_cmd_interactive)
 else
 	# $(current_design)
+	python gen_io.py ./$*/
 	mkdir -p ./$*/runs/$(OPENLANE_RUN_TAG) 
 	rm -rf ./$*/runs/$*
 	ln -s $$(realpath ./$*/runs/$(OPENLANE_RUN_TAG)) ./$*/runs/$*

@@ -1,1 +1,0 @@
-../rv_regs/gen_place.py
